@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context="com.zp.imitatemono.app.BaseActivity"
+    tools:layout_editor_absoluteY="25dp">
+
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/item_supertextview"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:sCenterTextGravity="center"
+        app:sCenterTopTextString="定制你感兴趣的主题"
+        app:sCenterTopTextSize="20dp"
+        app:sCenterTopTextColor="@color/white"
+        app:sCenterTextString="关注你感兴趣的主题站，当有内容更新时我们会在第一时间提醒你"
+        app:sCenterTextSize="15dp"
+        app:sCenterTextColor="@color/white"
+        app:sCenterBottomTextString="你可以自己决定每个主题推送的开启和关闭"
+        app:sCenterBottomTextSize="13dp"
+        app:sCenterBottomTextColor="@color/white"
+        app:sCenterSpaceHeight="7dp"
+        app:sCenterTvDrawableWidth="25dp"
+        app:sCenterTvDrawableHeight="25dp"
+        app:sBackgroundDrawableRes="@color/bule"
+        >
+
+    </com.allen.library.SuperTextView>
+
+</android.support.constraint.ConstraintLayout>
