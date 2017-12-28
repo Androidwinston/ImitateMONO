@@ -11,7 +11,7 @@
     <com.allen.library.SuperTextView
         android:id="@+id/item_supertextview"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="305dp"
         app:sCenterTextGravity="center"
         app:sCenterTopTextString="定制你感兴趣的主题"
         app:sCenterTopTextSize="20dp"

@@ -2,9 +2,7 @@ package com.zp.imitatemono.activity
 
 import android.content.Context
 import android.os.Bundle
-import android.view.Window
 import com.zp.imitatemono.R
-import com.zp.imitatemono.R.id.include
 import com.zp.imitatemono.app.BaseActivity
 
 class MainActivity : BaseActivity() {

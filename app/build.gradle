@@ -33,4 +33,5 @@ dependencies {
     implementation 'com.android.support:recyclerview-v7:27.0.2'
 
     implementation 'com.github.lygttpod:SuperTextView:2.1.5'
+    implementation 'com.zhy:base-rvadapter:3.0.3'
 }

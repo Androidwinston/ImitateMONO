@@ -12,7 +12,7 @@ import kotlinx.android.synthetic.main.activity_welcome.*
 import java.io.IOException
 
 
-class WelcomeActivity : BaseActivity(){
+class WelcomeActivity : BaseActivity() {
 
     //MediaPlayer初始化播放器
     val mp = MediaPlayer()
@@ -27,10 +27,10 @@ class WelcomeActivity : BaseActivity(){
     }
 
 
-    private fun initView(){
+    private fun initView() {
         welcome_imagebutton.setOnClickListener(this)
         //给videoView设置要播放的视频
-        welcome_videoview_spa.setVideoURI(Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.welcome))
+        welcome_videoview_spa.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.welcome))
         //监听播放状态，播放完了继续播放
         welcome_videoview_spa.setOnCompletionListener(MediaPlayer.OnCompletionListener {
             welcome_videoview_spa.start()
@@ -58,7 +58,7 @@ class WelcomeActivity : BaseActivity(){
 
     override fun onPause() {
         super.onPause()
-        if (mp!=null){
+        if (mp != null) {
             //MediaPlayer停止播放
             mp.stop()
             //MediaPlayer资源释放
@@ -70,15 +70,15 @@ class WelcomeActivity : BaseActivity(){
         welcome_videoview_spa.suspend()
     }
 
-    override fun  onBackPressed(){
+    override fun onBackPressed() {
         super.onBackPressed()
-        startActivity(Intent(this,MainActivity::class.java))
+        startActivity(Intent(this, MainActivity::class.java))
     }
 
     override fun onClick(v: View?) {
-        when(v){
-            welcome_imagebutton ->  {
-                startActivity(Intent(this,MainActivity::class.java))
+        when (v) {
+            welcome_imagebutton -> {
+                startActivity(Intent(this, MainActivity::class.java))
             }
         }
     }

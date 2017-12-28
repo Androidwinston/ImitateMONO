@@ -9,15 +9,19 @@
 
 
     <TextView
+        android:clickable="true"
         android:id="@+id/interest_textview"
-        android:layout_width="360dp"
+        android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@color/bule"
         android:gravity="center"
         android:text="选好了，开始imitatemono之旅"
         android:textColor="@color/white"
         android:textSize="10dp"
-        tools:layout_editor_absoluteY="517dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/interest_recyclerview" />
 
     <ImageView
         android:id="@+id/interest_imageview"
@@ -27,9 +31,10 @@
         android:paddingRight="13dp"
         android:scaleX="0.6"
         android:scaleY="0.6"
-        app:srcCompat="@drawable/icon_arrow_right_black"
-        tools:layout_editor_absoluteX="332dp"
-        tools:layout_editor_absoluteY="517dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/interest_recyclerview"
+        app:layout_constraintTop_toBottomOf="@+id/interest_recyclerview"
+        app:srcCompat="@drawable/icon_arrow_right_black" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/interest_recyclerview"
@@ -38,8 +43,7 @@
         app:layout_constraintBottom_toTopOf="@+id/interest_textview"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-    </android.support.v7.widget.RecyclerView>
+        app:layout_constraintTop_toTopOf="parent"></android.support.v7.widget.RecyclerView>
 
 
 </android.support.constraint.ConstraintLayout>
