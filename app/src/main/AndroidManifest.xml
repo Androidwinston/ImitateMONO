@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.zp.imitatemono">
 
+
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+
+
     <application
         android:name=".app.MyApplication"
         android:allowBackup="true"

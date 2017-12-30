@@ -20,8 +20,8 @@ class WelcomeActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //设置全屏
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN)
         setContentView(R.layout.activity_welcome)
         initView()
     }
@@ -30,7 +30,7 @@ class WelcomeActivity : BaseActivity() {
     private fun initView() {
         welcome_imagebutton.setOnClickListener(this)
         //给videoView设置要播放的视频
-        welcome_videoview_spa.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.welcome))
+        welcome_videoview_spa.setVideoURI(Uri.parse("android.resource://" + packageName + "/" + R.raw.welcome))
         //监听播放状态，播放完了继续播放
         welcome_videoview_spa.setOnCompletionListener(MediaPlayer.OnCompletionListener {
             welcome_videoview_spa.start()

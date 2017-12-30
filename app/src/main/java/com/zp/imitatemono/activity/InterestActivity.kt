@@ -13,8 +13,8 @@ import org.json.JSONObject
 class InterestActivity : BaseActivity() {
 
 
-    var commonAdapter:CommonAdapter<JSONObject>?=null
-    var mDatas:List<JSONObject>?=null
+    var commonAdapter: CommonAdapter<JSONObject>? = null
+    var mDatas: List<JSONObject>? = null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,27 +24,27 @@ class InterestActivity : BaseActivity() {
     }
 
 
-    private fun initView(){
+    private fun initView() {
         interest_textview.setOnClickListener(this)
 
     }
 
     override fun onClick(v: View?) {
-        when(v){
+        when (v) {
             interest_textview -> {
-                startActivity(Intent(this,MainActivity::class.java))
+                startActivity(Intent(this, MainActivity::class.java))
             }
         }
     }
 
-    private fun initAdapter(){
+    private fun initAdapter() {
         mDatas = listOf()
-        interest_recyclerview.setAdapter(object : CommonAdapter<JSONObject>(this, R.layout.item_theme_interest_recyclerview, mDatas) {
+        commonAdapter = object : CommonAdapter<JSONObject>(this, R.layout.item_theme_interest_recyclerview, mDatas) {
             override fun convert(holder: ViewHolder?, t: JSONObject?, position: Int) {
 
 
             }
-        })
+        }
     }
 
 }
