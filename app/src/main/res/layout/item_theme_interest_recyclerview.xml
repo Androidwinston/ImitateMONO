@@ -53,23 +53,24 @@
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <com.allen.library.SuperTextView
-        app:sBackgroundDrawableRes="@color/bule"
-        android:id="@+id/superButton"
+        android:clickable="true"
+        android:id="@+id/superTextView"
         android:layout_width="59dp"
         android:layout_height="24dp"
         android:layout_marginBottom="15dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
-        app:sCenterTextString = "+"
-        app:sCenterTextSize="15dp"
-        app:sCenterTextColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:sBackgroundDrawableRes="@color/bule"
+        app:sCenterTextColor="@color/white"
+        app:sCenterTextSize="15dp"
+        app:sCenterTextString="+"
         app:sCornersRadius="3dp" />
 
 </android.support.constraint.ConstraintLayout>

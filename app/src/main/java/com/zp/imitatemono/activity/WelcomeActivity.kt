@@ -1,5 +1,6 @@
 package com.zp.imitatemono.activity
 
+import android.content.Context
 import android.content.Intent
 import android.media.MediaPlayer
 import android.net.Uri
@@ -72,16 +73,25 @@ class WelcomeActivity : BaseActivity() {
 
     override fun onBackPressed() {
         super.onBackPressed()
-        startActivity(Intent(this, MainActivity::class.java))
+        skip()
     }
 
     override fun onClick(v: View?) {
         when (v) {
             welcome_imagebutton -> {
-                startActivity(Intent(this, MainActivity::class.java))
+                skip()
             }
         }
     }
 
 
+    private fun skip() {
+        var preferences = getSharedPreferences("imitatemono", Context.MODE_PRIVATE)
+        var isFist = preferences.getBoolean("InterestActivity", true)
+        if (isFist) {
+            startActivity(Intent(this, InterestActivity::class.java))
+        } else {
+            startActivity(Intent(this, MainActivity::class.java))
+        }
+    }
 }

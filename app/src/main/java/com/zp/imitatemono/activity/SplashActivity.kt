@@ -18,7 +18,7 @@ class SplashActivity : BaseActivity() {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         Handler(Looper.getMainLooper()).postDelayed({
             var preferences = getSharedPreferences("imitatemono",Context.MODE_PRIVATE)
-            var isFist = preferences.getBoolean("isFist",true)
+            var isFist = preferences.getBoolean("WelcomeActivity",true)
             if (isFist){
                 startActivity(Intent(this,WelcomeActivity::class.java))
             }else{
